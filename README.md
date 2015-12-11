@@ -1,6 +1,4 @@
-# READ ME
-
-== Introduction
+# Introduction
 Use Case
 
 To-do lists are notorious for collecting junk: to-do items that you want to remember, but are not very important and thus get consistently put-off. To address the problem of to-do list clutter, you will create Blocitoff.
@@ -17,7 +15,7 @@ As a user, I want to mark to-do items as complete and have them deleted	3
 As a user, I want to see how old a to-do item is	1
 As a user, my to-dos should be automatically deleted seven days after their creation date	2
 
-== READ ME
+# READ ME
 
 This README documents whatever steps are necessary to get the
 application up and running.
