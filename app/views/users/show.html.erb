@@ -20,3 +20,9 @@
   </div>
 
 </div>
+
+<h2>Items</h2>
+<%= render @user.items %>
+
+<h2>New Item</h2>
+<%= render 'items/form', item: Item.new, user: @user %>

@@ -1,0 +1,10 @@
+<%= form_for [user, item], remote: true do |f| %>
+  <div class="form-group">
+    <!-- sr-only doesn't show the label, just a placeholder -->
+    <%= f.label :name, class: 'sr-only' %>
+    <%= f.text_field :name, class: 'form-control', placeholder: "Enter a new item" %>
+  </div>
+
+  <%= f.submit "Submit Item", class: 'btn btn-default pull-right' %>
+
+<% end %>
