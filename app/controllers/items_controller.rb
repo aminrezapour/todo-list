@@ -14,8 +14,26 @@ class ItemsController < ApplicationController
       format.html
       format.js
     end
-    
+
   end
+
+  def destroy
+    @user = current_user
+    @item = @user.items.find(params[:id])
+
+    if @item.destroy
+      flash[:notice] = "Comment was deleted."
+    else
+      flash[:error] = "Comment couldn't be deleted. Try again."
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+  end
+
 
 
   private
