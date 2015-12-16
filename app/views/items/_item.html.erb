@@ -7,6 +7,7 @@
       <%= link_to "", [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
 
     </h4>
+    created at <%= item.created_at %> <br />
     <%= distance_of_time_in_words(Time.now, item.created_at + 7.days) %> left before expires.
   </div>
 
