@@ -12,7 +12,7 @@
 
       <div class="media-body">
         <h2 class="media-heading"><%= @user.email %></h2>
-
+        <div class='js-items-count'><%= pluralize(@user.items.count, 'item') %></div>
       </div>
 
     </div>
@@ -22,7 +22,11 @@
 </div>
 
 <h2>Items</h2>
-<%= render @user.items %>
+<div class='js-items'>
+    <%= render @user.items %>
+</div>
 
-<h2>New Item</h2>
-<%= render 'items/form', item: Item.new, user: @user %>
+<div class='new-item'>
+    <h2>New Item</h2>
+    <%= render 'items/form', item: Item.new, user: @user %>
+</div>
