@@ -1,4 +1,5 @@
-<div class="media", id='#item-' +<%= item.id %>">
+<%= content_tag :div, class: "media", id: "item-#{item.id}" do %>
+
   <div class="media-body">
     <h4 class="media-heading">
 
@@ -7,4 +8,5 @@
 
     </h4>
   </div>
-</div>
+
+<% end %>
