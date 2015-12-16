@@ -6,9 +6,9 @@ class ItemsController < ApplicationController
     @new_item = Item.new
 
     if @item.save
-      flash[:notice] = "Item save successfully"
+      flash.now[:notice] = "Item save successfully"
     else
-      flash[:error] = "Item failed to save"
+      flash.now[:error] = "Item failed to save"
     end
 
     respond_to do |format|
