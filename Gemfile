@@ -41,3 +41,5 @@ gem 'bcrypt'
 gem 'figaro', '1.0'
 # To make sign up and sign in easier
 gem 'devise'
+# To automate rake tasks
+gem 'whenever', :require => false
