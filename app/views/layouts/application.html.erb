@@ -13,7 +13,7 @@
      <ul class="nav nav-tabs">
 
        <% if user_signed_in? %>
-          <li><%= link_to "My To-Do", user_path(current_user) %></li>
+          <li><%= link_to "My Items", user_path(current_user) %></li>
           <li><%= link_to "About", about_path %></li>
 
           <div class="pull-right">
@@ -36,9 +36,27 @@
 
      </ul>
 
-  </div>
+     <div class="flash">
+         <% if flash[:notice] %>
+           <div class="alert alert-success">
+             <button type="button" class="close" data-dismiss="alert">&times;</button>
+             <%= flash[:notice] %>
+           </div>
+         <% elsif flash.now[:alert] %>
+           <div class="alert alert-danger">
+             <button type="button" class="close" data-dismiss="alert">&times;</button>
+             <%= flash.now[:alert] %>
+           </div>
+         <% elsif flash[:alert] %>
+           <div class="alert alert-warning">
+             <button type="button" class="close" data-dismiss="alert">&times;</button>
+             <%= flash[:alert] %>
+           </div>
+         <% end %>
+     </div>
 
- <%= yield %>
+     <%= yield %>
+  </div>
 
 </body>
 </html>
